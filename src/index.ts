@@ -58,3 +58,21 @@ let arr2: number[] = [1,2,3];
 let arr3: boolean[] = [true,false];
 
 let arrall:  (string | number | boolean[])[] = ["a","b","c",1,5,[true,false]]
+
+
+/* Enable error reporting for expressions and declarations with an implied 'any' type. */
+let msgIn = true;
+/* Enable error reporting for codepaths that do not explicitly return in a function. */
+
+ /* Raise an error when a function parameter isn't read. */
+const funshowwords = (fname: string,fage: number,salary: number): string => {
+     /* Enable error reporting when local variables aren't read. */
+    let test = 12;
+    if(msgIn){
+       return `your name is ${fname} and age is ${fage} , salary `
+    }
+    return "no data to show";
+}
+
+console.log(funshowwords("kamal",20,20000))
+
