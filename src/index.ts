@@ -27,3 +27,11 @@ let love: boolean = true;
 // solution for the err above
  let Data: any = "hi there"
  Data = 44;
+
+
+ // ts will show you and does not run the code err
+function add (n1: number,n2: number){
+    return n1 + n2;
+}
+console.log(add(1,"6"))
+console.log(typeof add(1,"6"))
