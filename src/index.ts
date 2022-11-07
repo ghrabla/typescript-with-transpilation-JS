@@ -76,3 +76,9 @@ const funshowwords = (fname: string,fage: number,salary: number): string => {
 
 console.log(funshowwords("kamal",20,20000))
 
+// Function Optional and Default Parameters
+function returndata(name: string,age: number,city?: string){
+    return `${name} - ${age} - ${city}`
+}
+returndata("kamal",20,"safi")
+
