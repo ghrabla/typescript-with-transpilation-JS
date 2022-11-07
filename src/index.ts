@@ -50,3 +50,11 @@ let myfriends: string[] = ["adnane","abdelhak","amine","mouad","abd rafie",12]
 for (let i = 0 ; i < myfriends.length ; i++){
     console.log(myfriends[i].repeat(3))
 }
+
+// Type Annotations With Multidimensional
+
+let arr1: string[] = ["a","b","c"];
+let arr2: number[] = [1,2,3];
+let arr3: boolean[] = [true,false];
+
+let arrall:  (string | number | boolean[])[] = ["a","b","c",1,5,[true,false]]
