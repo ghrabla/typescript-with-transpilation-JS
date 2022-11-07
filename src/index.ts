@@ -35,3 +35,18 @@ function add (n1: number,n2: number){
 }
 console.log(add(1,"6"))
 console.log(typeof add(1,"6"))
+
+
+// set two typs into one var 
+let all: number | string | boolean;
+all = "kamal";
+all = 20;
+all = true
+
+// Type 'number' is not assignable to type 'string'. arr
+
+let myfriends: string[] = ["adnane","abdelhak","amine","mouad","abd rafie",12]
+
+for (let i = 0 ; i < myfriends.length ; i++){
+    console.log(myfriends[i].repeat(3))
+}
