@@ -77,8 +77,23 @@ const funshowwords = (fname: string,fage: number,salary: number): string => {
 console.log(funshowwords("kamal",20,20000))
 
 // Function Optional and Default Parameters
-function returndata(name: string,age: number,city?: string){
+// A required parameter cannot follow an optional parameter.
+function returndata(name?: string,age: number,city?: string){
     return `${name} - ${age} - ${city}`
 }
 returndata("kamal",20,"safi")
+
+
+// Function Rest Parameter
+function addall (...nums: number[]): number{
+    let result = 0;
+    // for (let i = 0;i<nums.length ; i++){
+        // result += nums[i];
+    // }
+    nums.forEach((nums)=> result += nums)
+    return result;
+}
+// +true is a unari operator and it will return 1
+console.log(addall(10,99,57, +true))
+
 
