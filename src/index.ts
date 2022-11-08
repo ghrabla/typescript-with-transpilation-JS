@@ -93,7 +93,23 @@ function addall (...nums: number[]): number{
     nums.forEach((nums)=> result += nums)
     return result;
 }
-// +true is a unari operator and it will return 1
+// +true is a unary operator and it will return 1
 console.log(addall(10,99,57, +true))
+
+// data types:
+// type alias
+
+type st = string;
+let theName: st = "kamal";
+theName = 10;
+
+// two types
+type twot = string | number;
+let hisName: twot = "brahim";
+hisName = 10;
+
+
+
+
 
 
