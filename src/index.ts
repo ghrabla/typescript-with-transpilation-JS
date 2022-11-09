@@ -238,15 +238,15 @@ function getHardSeconds() : number {
     Ten = 15
   }
   
-  enum Level {
+  enum Level1 {
     Kid = Kids.Ten,
-    Easy = 9,
-    Medium = Easy - 3,
-    Hard = getHardSeconds()
+    Easy1 = 9,
+    Medium1 = Easy1 - 3,
+    Hard1 = getHardSeconds()
   }
   
-  let lvl: string = "Easy";
+  let lvl1: string = "Easy";
   
-  if (lvl === "Easy") {
-    console.log(`The Level Is ${lvl} And Number Of Seconds Is ${Level.Hard}`);
+  if (lvl1 === "Easy") {
+    console.log(`The Level Is ${lvl1} And Number Of Seconds Is ${Level1.Hard}`);
   }
