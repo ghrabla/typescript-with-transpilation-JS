@@ -130,7 +130,23 @@ function getActions(btns: last){
 getActions({up: "jump", right: "go right",down: "go down",left: "go left", x: true})
 
 
+//  Literal Types
+// it looks like you are adding ur own type into js
+type nums = 0 | 1 | -1;
 
+function compare(num1: number, num2: number): nums{
+    if(num1 == num2){
+        return 0;
+    }else if(num1 > num2){
+        return 1;
+    }else{
+        return -1
+    }
+}
+
+compare(12,15)
+compare(17,13)
+compare(11,11)
 
 
 
