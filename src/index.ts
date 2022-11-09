@@ -149,5 +149,13 @@ compare(17,13)
 compare(11,11)
 
 
+// tuple 
+// it does not let push new item and does not change position in the arr number should be number
+let article: readonly [number, string , boolean] = [11, "article one",false];
+
+console.log(article)
+// destructuring declaration
+const [id,title,published] = article;
+console.log(id,title,published);
 
 
