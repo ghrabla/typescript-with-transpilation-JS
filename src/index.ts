@@ -37,7 +37,7 @@ console.log(add(1,"6"))
 console.log(typeof add(1,"6"))
 
 
-// set two typs into one var 
+// set two types into one var 
 let all: number | string | boolean;
 all = "kamal";
 all = 20;
@@ -182,8 +182,38 @@ function alwasmyname(name: string): never{
     }
 }
 
-alwasmyname("kamal");
+// alwasmyname("kamal");
 // Unreachable code detected. because the function above hav infinite loop
-console.log(("test"));
+// console.log(("test"));
 
 
+// enums
+/*
+  Data Types
+  - Enums => Enumerations
+  --- Allow Us To Declare A Set Of Named Constants
+  --- Used For Logical Grouping Collection Of Constants "Collection Of Related Values"
+  --- It Organize Your Code
+  --- By Default Enums Are Number-Based, First Element Is 0
+  --- Theres A Numeric Enums
+  --- Theres A String-Based Enums
+  --- Theres Heterogeneous Enums [String + Number]
+*/
+
+const KIDS = 15;
+const EASY = 9;
+const MEDIUM = 6;
+const HARD = 3;
+
+enum Level {
+  Kids = 15,
+  Easy = 9,
+  Medium = 6,
+  Hard = 3
+}
+
+let lvl: string = "Easy";
+
+if (lvl === "Easy") {
+  console.log(`The Level Is ${lvl} And Number Of Seconds Is ${Level.Easy}`);
+}
