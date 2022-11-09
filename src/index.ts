@@ -109,6 +109,28 @@ let hisName: twot = "brahim";
 hisName = 10;
 
 
+// type alias advanced
+type Buttons = {
+    up: string,
+    right: string,
+    down: string,
+    left: string
+}
+
+type last = Buttons & {
+    x: boolean
+}
+
+function getActions(btns: last){
+    console.log(`Action for button up is ${btns.up}`)
+    console.log(`Action for button right is ${btns.right}`)
+    console.log(`Action for button left is ${btns.left}`)
+    console.log(`Action for button down is ${btns.down}`)
+}
+getActions({up: "jump", right: "go right",down: "go down",left: "go left", x: true})
+
+
+
 
 
 
