@@ -158,4 +158,32 @@ console.log(article)
 const [id,title,published] = article;
 console.log(id,title,published);
 
+// Void And Never
+
+// it does not return any value but it return void
+function logging (msg: string): void{
+    console.log(msg);
+    return;
+}
+console.log(logging("i am a message"));
+// the next line work fine
+console.log("test");
+
+const fail = (msg: string): never => {
+    throw new Error(msg);
+    // 'Unreachable code detected' if i am not using never 
+    return 10 ;
+    // Type 'number' is not assignable to type 'never'. with never
+}
+
+function alwasmyname(name: string): never{
+    while(true){
+        console.log("my name is", name)
+    }
+}
+
+alwasmyname("kamal");
+// Unreachable code detected. because the function above hav infinite loop
+console.log(("test"));
+
 
