@@ -456,3 +456,27 @@ const littleone = new Someone("kamal",30000)
 // console.log(littleone.salary)
 // even now private does not exist in js there private feild it near into private
 
+// getters and setters
+
+class Somebody{
+  private _username: string ;
+  protected salary: number;
+  msg: () => string;
+  constructor(_username: string,salary: number){
+    this._username = _username;
+    this.salary = salary;
+    this.msg = () =>{
+      return `hello ${this.username} ur salary is ${this.salary}`
+    }
+  }
+  get username(): string{
+    return this._username;
+  }
+  set username(value: string){
+    this._username = value;
+  }
+}
+
+const littletwo = new Somebody("kamal",30000)
+
+console.log(littletwo.username)
