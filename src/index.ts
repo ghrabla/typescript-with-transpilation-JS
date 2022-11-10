@@ -415,3 +415,20 @@ let admin: Admin = {
 
 // deff btwn type alias and interface is that you can add new proprtie in interface while you can not in type alias
 
+// class type annotations
+
+class User{
+  u: string ;
+  s: number;
+  msg: () => string;
+  constructor(username: string,salary: number){
+    this.u = username;
+    this.s = salary;
+    this.msg = () =>{
+      return `hello ${this.u} ur salary is ${this.s}`
+    }
+  }
+}
+
+const userone = new User("kamal",10000)
+console.log(userone.msg())
