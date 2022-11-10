@@ -412,3 +412,6 @@ let admin: Admin = {
   token: true,
   role: true
 }
+
+// deff btwn type alias and interface is that you can add new proprtie in interface while you can not in type alias
+
