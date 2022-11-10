@@ -365,3 +365,28 @@ let user: User = {
 
 // getinfo({id: 2,username: "kamal",country: "germany"})
 
+// reopen interface and use cases
+
+// home page 
+interface Settings{
+  theme: boolean,
+  font: string
+}
+
+// articles page
+interface Settings{
+  sidebar: boolean
+}
+
+// contact page
+interface Settings{
+  external?: boolean
+}
+
+let userSettings: Settings = {
+  theme: true,
+  font: "open",
+  sidebar: false
+}
+
+
