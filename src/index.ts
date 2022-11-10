@@ -389,4 +389,26 @@ let userSettings: Settings = {
   sidebar: false
 }
 
+// interface extend
 
+interface Person{
+  name: string ,
+  email: string ,
+  password: string
+}
+
+interface Client extends Person {
+  token: boolean
+}
+
+interface Admin extends Client{
+  role: boolean
+}
+
+let admin: Admin = {
+  name: "kamal ghrabla",
+  email: "kamalghrabla@gmail.com",
+  password: "hh190093",
+  token: true,
+  role: true
+}
