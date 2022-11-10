@@ -305,3 +305,29 @@ type A = {
   }
   
   getActions1({ one: "String", two: 100, three: true, five: true });
+
+  // type annotations with object
+
+  let myObject: {
+    readonly username: string,
+     userage: number,
+     hire?: boolean,
+     skills: {
+       one: string,
+       two: string
+     }
+    } = { 
+    username: "kamal",
+    userage: 20,
+    skills: {
+      one: "html",
+      two: "js"
+    }
+  }
+
+// change these values
+// Cannot assign to 'username' because it is a read-only property.
+myObject.username = "hamza";
+myObject.userage = 19;
+myObject.hire = true;
+
