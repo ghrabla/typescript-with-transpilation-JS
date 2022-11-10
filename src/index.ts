@@ -338,20 +338,30 @@ myObject.hire = true;
 interface User{
   id: number,
   readonly username: string,
-  country?: string
+  country?: string,
+  sayHello(): string
+  saywelcom : () => string
 }
 
 let user: User = {
   id: 1,
   username: "kamal",
-  // country: "morocco"
+  country: "morocco",
+  sayHello(){
+   return `hello ${this.username}`
+  },
+  saywelcom: () => {
+    // you can't use this keyword inside arrow function
+   return `welcom ${user.username}`
+  }
 }
 
-function getinfo(data: User){
-  console.log(`username is ${data.username}`);
-  console.log(`id is ${data.id}`);
-  console.log(`country is ${data.country}`);
+// function getinfo(data: User){
+//   console.log(`username is ${data.username}`);
+//   console.log(`id is ${data.id}`);
+//   console.log(`country is ${data.country}`);
   
-}
+// }
 
-getinfo({id: 2,username: "kamal",country: "germany"})
+// getinfo({id: 2,username: "kamal",country: "germany"})
+
