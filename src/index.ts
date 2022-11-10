@@ -480,3 +480,25 @@ class Somebody{
 const littletwo = new Somebody("kamal",30000)
 
 console.log(littletwo.username)
+
+/*
+  Class
+  - Static Members
+  --- Don't Use "name, length, call"
+*/
+
+class Body {
+  private static created: number = 0;
+  static getCount() : void {
+    console.log(`${this.created} Objects Created`);
+  }
+  constructor(public username: string) {
+    Body.created++;
+  }
+}
+
+let u1 = new Body("kamal");
+let u2 = new Body("ghrabla");
+let u3 = new Body("ghr");
+// console.log(Body.created);
+Body.getCount();
