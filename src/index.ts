@@ -331,3 +331,27 @@ myObject.username = "hamza";
 myObject.userage = 19;
 myObject.hire = true;
 
+
+// Interface Declaration
+
+
+interface User{
+  id: number,
+  readonly username: string,
+  country?: string
+}
+
+let user: User = {
+  id: 1,
+  username: "kamal",
+  // country: "morocco"
+}
+
+function getinfo(data: User){
+  console.log(`username is ${data.username}`);
+  console.log(`id is ${data.id}`);
+  console.log(`country is ${data.country}`);
+  
+}
+
+getinfo({id: 2,username: "kamal",country: "germany"})
