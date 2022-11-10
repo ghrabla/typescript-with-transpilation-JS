@@ -432,3 +432,27 @@ class User{
 
 const userone = new User("kamal",10000)
 console.log(userone.msg())
+
+// access modifiersin ts
+
+
+class Someone{
+  private username: string ;
+  protected salary: number;
+  msg: () => string;
+  constructor(username: string,salary: number){
+    this.username = username;
+    this.salary = salary;
+    this.msg = () =>{
+      return `hello ${this.username} ur salary is ${this.salary}`
+    }
+  }
+}
+
+const littleone = new Someone("kamal",30000)
+// Property 'username' is private and only accessible within class 'Someone'.
+// console.log(littleone.username)
+// Property 'salary' is protected and only accessible within class 'Someone' and its subclasses.
+// console.log(littleone.salary)
+// even now private does not exist in js there private feild it near into private
+
